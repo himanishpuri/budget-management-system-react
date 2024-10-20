@@ -14,7 +14,9 @@ import SidebarNav from "../SidebarNav/SidebarNav";
 import BreadcrumbAndProfile from "../BreadcrumbAndProfile/BreadcrumbAndProfile";
 import * as XLSX from "xlsx";
 import { Line } from "react-chartjs-2";
+import { Chart, registerables } from "chart.js";
 import "chartjs-adapter-date-fns";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faFileExcel,
@@ -179,6 +181,8 @@ function Incomes() {
 		],
 	};
 
+	Chart.register(...registerables);
+
 	const chartOptions = {
 		scales: {
 			x: {
@@ -196,6 +200,11 @@ function Incomes() {
 					display: true,
 					text: "Income (€)",
 				},
+			},
+		},
+		plugins: {
+			legend: {
+				display: true,
 			},
 		},
 	};

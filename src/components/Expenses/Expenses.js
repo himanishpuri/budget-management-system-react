@@ -193,7 +193,7 @@ function Expenses() {
 	const chartOptions = {
 		scales: {
 			x: {
-				type: "time", // Set x-axis scale to time
+				type: "int", // Set x-axis scale to time
 				time: {
 					unit: "day",
 				},
