@@ -60,12 +60,12 @@ function SidebarNav() {
 				Sign Out
 			</Nav.Link>
 			<a
-				href="https://github.com/himanishpuri"
+				href="https://github.com/himanishpuri/swe-plutusX"
 				className="github-link"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<FontAwesomeIcon icon={faGithub} /> made by Himanish
+				<FontAwesomeIcon icon={faGithub} /> made by PlutusX
 			</a>
 		</Nav>
 	);
