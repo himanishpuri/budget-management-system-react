@@ -147,12 +147,12 @@ function Incomes() {
 			: incomes;
 
 	// Pagination logic
-	const indexOfLastIncome = currentPage * incomesPerPage;
-	const indexOfFirstIncome = indexOfLastIncome - incomesPerPage;
-	const currentIncomes = filteredIncomes.slice(
-		indexOfFirstIncome,
-		indexOfLastIncome,
-	);
+	// const indexOfLastIncome = currentPage * incomesPerPage;
+	// const indexOfFirstIncome = indexOfLastIncome - incomesPerPage;
+	// const currentIncomes = filteredIncomes.slice(
+	// 	indexOfFirstIncome,
+	// 	indexOfLastIncome,
+	// );
 
 	// Change page function
 	const handlePreviousPage = () => {
@@ -317,7 +317,7 @@ function Incomes() {
 										<option value="">Select a category</option>
 										{categories.map((cat, index) => (
 											<option
-												key={index}
+												key={index * 23}
 												value={cat}
 											>
 												{cat}

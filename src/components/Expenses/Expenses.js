@@ -13,7 +13,6 @@ import {
 import SidebarNav from "../SidebarNav/SidebarNav";
 import BreadcrumbAndProfile from "../BreadcrumbAndProfile/BreadcrumbAndProfile";
 import * as XLSX from "xlsx"; // Import xlsx
-import { Chart as ChartJS } from "chart.js/auto";
 import { Line } from "react-chartjs-2";
 import "chartjs-adapter-date-fns";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -156,15 +155,15 @@ function Expenses() {
 			: expenses;
 
 	// Pagination logic
-	const indexOfLastExpense = currentPage * expensesPerPage;
-	const indexOfFirstExpense = indexOfLastExpense - expensesPerPage;
-	const currentExpenses = filteredExpenses.slice(
-		indexOfFirstExpense,
-		indexOfLastExpense,
-	);
+	// const indexOfLastExpense = currentPage * expensesPerPage;
+	// const indexOfFirstExpense = indexOfLastExpense - expensesPerPage;
+	// const currentExpenses = filteredExpenses.slice(
+	// 	indexOfFirstExpense,
+	// 	indexOfLastExpense,
+	// );
 
 	// Change page function
-	const paginate = (pageNumber) => setCurrentPage(pageNumber);
+	// const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
 	// Handle page navigation
 	const handlePreviousPage = () => {
@@ -329,7 +328,7 @@ function Expenses() {
 										<option value="">Select a category</option>
 										{categories.map((cat, index) => (
 											<option
-												key={index}
+												key={index * 23}
 												value={cat}
 											>
 												{cat}

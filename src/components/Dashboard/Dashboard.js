@@ -9,6 +9,7 @@ import "./Dashboard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotateRight } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 
 function Dashboard({ totalIncomes, totalExpenses }) {
 	// Calculate the total financial data
@@ -151,5 +152,10 @@ function Dashboard({ totalIncomes, totalExpenses }) {
 		</Container>
 	);
 }
+
+Dashboard.propTypes = {
+	totalIncomes: PropTypes.number.isRequired,
+	totalExpenses: PropTypes.number.isRequired,
+};
 
 export default Dashboard;
