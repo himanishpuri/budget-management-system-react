@@ -14,6 +14,7 @@ import SidebarNav from "../SidebarNav/SidebarNav";
 import BreadcrumbAndProfile from "../BreadcrumbAndProfile/BreadcrumbAndProfile";
 import * as XLSX from "xlsx"; // Import xlsx
 import { Line } from "react-chartjs-2";
+import { Chart, registerables } from "chart.js";
 import "chartjs-adapter-date-fns";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -189,11 +190,12 @@ function Expenses() {
 			},
 		],
 	};
+	Chart.register(...registerables);
 
 	const chartOptions = {
 		scales: {
 			x: {
-				type: "int", // Set x-axis scale to time
+				type: "time", // Set x-axis scale to time
 				time: {
 					unit: "day",
 				},
