@@ -13,7 +13,7 @@ import PropTypes from "prop-types";
 
 function Dashboard({ totalIncomes, totalExpenses }) {
 	// Calculate the total financial data
-	const total = totalIncomes + totalExpenses;
+	const total = totalIncomes - totalExpenses;
 
 	// Function to reload the page
 	const handleReload = () => {
@@ -39,7 +39,7 @@ function Dashboard({ totalIncomes, totalExpenses }) {
 						pageTitle="Dashboard"
 						breadcrumbItems={[
 							{ name: "Dashboard", path: "/dashboard", active: true },
-							{ name: "Welcome", path: "/welcome", active: true },
+							{ name: "Welcome", path: "/dashboard", active: true },
 						]}
 					/>
 
@@ -70,8 +70,8 @@ function Dashboard({ totalIncomes, totalExpenses }) {
 								<InfoCard
 									title="Total"
 									value={`$${total}`}
-									linkText="View details"
-									linkTo="/dashboard"
+									// linkText="View details"
+									// linkTo="/dashboard"
 								/>
 							</motion.div>
 						</Col>

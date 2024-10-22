@@ -16,7 +16,7 @@ function SidebarNav() {
 		<Nav className="flex-column fixed">
 			<Link to="/dashboard">
 				<img
-					src={`${process.env.PUBLIC_URL}/images/Logo/plutusXLogo.svg`}
+					src={`${process.env.PUBLIC_URL}/images/Logo/KuberFinanceLogo.svg`}
 					alt="Logo"
 					className="logo-img"
 				/>
@@ -65,7 +65,7 @@ function SidebarNav() {
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<FontAwesomeIcon icon={faGithub} /> made by PlutusX
+				<FontAwesomeIcon icon={faGithub} /> made by KuberFinance
 			</a>
 		</Nav>
 	);
